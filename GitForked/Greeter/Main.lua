@@ -29,13 +29,9 @@ function ChatHandler(sender, args)
             Turbine.Shell.WriteLine("<rgb=#008080>Greeter: </rgb> " .. args.Message);
             -- Get player name
             local PlayerName = args.Message:match("^(%S+)")
-            -- Random greeting
-            --local Greeting = Greetings[math.random(#Greetings)]
             -- Choose a greeting with dynamic quickslots
             local quickslots = {}
             local size = 40
-            --local spacing = 5
-            --local leftMargin = 15
             GreeterWindow:SetVisible(true)
             -- Assign shortcuts dynamically
             listBox:ClearItems()
@@ -43,9 +39,7 @@ function ChatHandler(sender, args)
                 -- Replace <Player Name> with the player's name
                 local greetings, count = string.gsub(Greetings[i], "<Player Name>", PlayerName)
                 quickslots[i] = Turbine.UI.Lotro.Quickslot()
-                --quickslots[i]:SetParent(GreeterWindow)
                 quickslots[i]:SetSize(size, size)
-                --quickslots[i]:SetPosition(leftMargin + (i - 1) * (size + spacing), 40)
                 quickslots[i]:SetBackground(0x410001c9)
                 quickslots[i]:SetVisible(true)
                 quickslots[i]:SetShortcut(Turbine.UI.Lotro.Shortcut(Turbine.UI.Lotro.ShortcutType.Alias, "/k " .. greetings))
