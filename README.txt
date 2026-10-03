@@ -42,4 +42,4 @@ Under 'About', select the setting for which character(s) you wish to automatical
 Available from:
 
 https://github.com/Git-Forked/Greeter        <--(LATEST UPDATES)
-https://www.lotrointerface.com/downloads/
+https://www.lotrointerface.com/downloads/info1326-Greeter.html

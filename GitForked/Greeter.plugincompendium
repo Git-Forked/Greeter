@@ -4,8 +4,8 @@
   <Name>Greeter</Name>
   <Version>1.0.0</Version>
   <Author>Git-Forked</Author>
-  <InfoUrl></InfoUrl>
-  <DownloadUrl></DownloadUrl>
+  <InfoUrl>https://www.lotrointerface.com/downloads/info1326</InfoUrl>
+  <DownloadUrl>http://www.lotrointerface.com/downloads/download1326</DownloadUrl>
   <Descriptors>
     <descriptor>GitForked\Greeter.plugin</descriptor>
   </Descriptors>
