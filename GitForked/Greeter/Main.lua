@@ -7,7 +7,7 @@ import "Turbine.UI";
 import "Turbine.UI.Lotro";
 
 -- Greeter imports
-import "GitForked3.Greeter.Greetings";
+import "GitForked.Greeter.Greetings";
 
 function AddCallback(object, event, callback)
     if (object[event] == nil) then
