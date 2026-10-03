@@ -1,5 +1,5 @@
 -- Greeter (Main.lua)
--- 0.0.1
+-- 1.0.0
 
 -- Turbine imports
 import "Turbine";
