@@ -1,0 +1,18 @@
+-- Customize this list with your own greetings, have as many or as few as you would like.
+-- Make a backup copy of your custom list, updates will overwrite.
+-- <Player Name> will resolve to the player's name.
+-- Note: The last entry does not have a trailing comma.
+
+Greetings = {
+    "Greetings, <Player Name>!",
+    "Felicitations and good spirits, <Player Name>.",
+    "Salutations, <Player Name>.",
+    "Well met, <Player Name>.",
+    "Welcome to our kinship, <Player Name>.",
+    "<Player Name>, cheers!",
+    "Let adventure brighten your day, <Player Name>.",
+    "<Player Name>, tell us of your adventures.",
+    "Journey far and wide, <Player Name>.",
+    "May your plate always be full, <Player Name>.",
+    "The spoils of victory be yours, <Player Name>!"
+}

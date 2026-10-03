@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Plugin>
+    <Information>
+        <Name>Greeter</Name>
+        <Author>Git-Forked</Author>
+        <Version>0.0.1</Version>
+        <Description>Greet Your Kinship</Description>
+    </Information>
+    <Package>GitForked3.Greeter.Main</Package>
+</Plugin>
