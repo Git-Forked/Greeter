@@ -1,5 +1,5 @@
 -- Greeter (Main.lua)
--- 1.0.0
+-- 1.1.0
 
 -- Turbine imports
 import "Turbine";
@@ -8,6 +8,7 @@ import "Turbine.UI.Lotro";
 
 -- Greeter imports
 import "GitForked.Greeter.Greetings";
+import "GitForked.Greeter.Welcomes";
 
 function AddCallback(object, event, callback)
     if (object[event] == nil) then
@@ -22,9 +23,12 @@ function AddCallback(object, event, callback)
     return callback;
 end
 
-KinmateOnline = "has come online."
+KinmateOnline = "has come online"
+KinmateRecruited = "into your kinship"
+
 function ChatHandler(sender, args)
     if args.ChatType == Turbine.ChatType.Kinship then
+        -- Online
         if string.match(args.Message, KinmateOnline) then
             Turbine.Shell.WriteLine("<rgb=#008080>Greeter: </rgb> " .. args.Message);
             -- Get player name
@@ -43,6 +47,39 @@ function ChatHandler(sender, args)
                 quickslots[i]:SetBackground(0x410001c9)
                 quickslots[i]:SetVisible(true)
                 quickslots[i]:SetShortcut(Turbine.UI.Lotro.Shortcut(Turbine.UI.Lotro.ShortcutType.Alias, "/k " .. greetings))
+                quickslots[i].MouseClick = function(sender, args)
+                    GreeterWindow:SetVisible(false)
+                end
+                listBox:AddItem(quickslots[i])
+            end
+        end
+        -- Recruited
+        if string.match(args.Message, KinmateRecruited) then
+            Turbine.Shell.WriteLine("<rgb=#008080>Greeter: </rgb> " .. args.Message);
+            -- Get player name
+            local PlayerName = nil
+            local c = 0
+            for word in args.Message:gmatch("%S+") do
+                c = c + 1
+                if c == 4 then
+                    PlayerName = word
+                    break
+                end
+            end
+            -- Choose a greeting with dynamic quickslots
+            local quickslots = {}
+            local size = 40
+            GreeterWindow:SetVisible(true)
+            -- Assign shortcuts dynamically
+            listBox:ClearItems()
+            for i = 1, #Welcomes do
+                -- Replace <Player Name> with the player's name
+                local welcomes, count = string.gsub(Welcomes[i], "<Player Name>", PlayerName)
+                quickslots[i] = Turbine.UI.Lotro.Quickslot()
+                quickslots[i]:SetSize(size, size)
+                quickslots[i]:SetBackground(0x410001c9)
+                quickslots[i]:SetVisible(true)
+                quickslots[i]:SetShortcut(Turbine.UI.Lotro.Shortcut(Turbine.UI.Lotro.ShortcutType.Alias, "/k " .. welcomes))
                 quickslots[i].MouseClick = function(sender, args)
                     GreeterWindow:SetVisible(false)
                 end

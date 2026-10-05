@@ -11,9 +11,9 @@ Greet your kinmates.
 Long Description:
 
 Greet your kinmates with one click messages.
-Messages are completely customizable in: Greetings.lua
+Messages are completely customizable in: Greetings.lua and Welcomes.lua
 Have as many or as few as you would like.
-When a kinmate logs in you will be presented with a window of the choices.
+When a kinmate comes online or joins your kinship you will be presented with a window of the choices.
 Hover the mouse over the quickslots to read the full message.
 Click to post the desired message to your kinship chat.
 

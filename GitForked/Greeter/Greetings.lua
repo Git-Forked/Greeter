@@ -3,12 +3,13 @@
 -- <Player Name> will resolve to the player's name.
 -- Note: The last entry does not have a trailing comma.
 
+-- Greetings greet a kin member when they come online.
+
 Greetings = {
     "Greetings, <Player Name>!",
     "Felicitations and good spirits, <Player Name>.",
     "Salutations, <Player Name>.",
     "Well met, <Player Name>.",
-    "Welcome to our kinship, <Player Name>.",
     "<Player Name>, cheers!",
     "Let adventure brighten your day, <Player Name>.",
     "<Player Name>, tell us of your adventures.",
